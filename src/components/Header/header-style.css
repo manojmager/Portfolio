@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
+:root {
+    --color-black-secondary: #212427;
+    --color-gray: #262626;
+    --color-white: #FFFFFF;
+    --color-primary: #E1DFDD;
+    --color-accent: #5f9ea0;
+
+    --text-primary: 'Work Sans', sans-serif;
+    --text-secondary: sans-serif;
+    --text-custom: 'Rubik Vinyl', cursive;
+    --text-rob: Orbitron, sans-serif;
+
+    --text-huge: 12vw;
+    --text-medium-huge: 9vw;
+    --text-medium-medium: 30px;
+    --text-paragraph: 20px;
+    --text-medium: 12.5px;
+    --text-small: 10.5px;
+}
+nav {
+    position: fixed;
+    font-family: var(--text-primary);
+    top: 3.3vw;
+    bottom: 3.3vw;
+    left: 3.3vw;
+    right: 3.3vw;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
+.contact-nav {
+    position: absolute;
+    right: 0;
+}
+
+.main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logo a,
+.main-nav a,
+.contact-nav a {
+    font-weight: 600;
+    text-decoration: none;
+    font-family: var(--text-primary);
+    color: var(--color-black-secondary);
+    font-size: var(--text-medium);
+    cursor: none;
+}
+
+.nav a,
+.nav-link:before,
+.nav-link:after {
+    transition: all 0.5s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-gray);
+}
+
+.nav-link.active:before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    content: '.';
+    color: transparent;
+    background-color: var(--color-black-secondary);
+    height: 2px;
+}
+
+.nav-link:after {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background-color: var(--color-black-secondary);
+    height: 2px;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.main-items {
+    position: relative;
+    /* Make it stick/fixed */
+    transition: all .4s;
+    /* Transition effect when sliding down (and up) */
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.contact-model {
+    display: none;
+}
+
+.contact-model[data-visible="true"] {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: 11000;
+}
+  
+.contact-model-content {
+    height: 95%;
+    width: 99%;
+    position: relative;
+    background-color: var(--color-accent);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-model-content p {
+    font-size: 6vw;
+    width: min-content;
+}
+
+.close {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-size: var(--text-medium-medium);
+    cursor: pointer;
+    background-image: url(../../assets/img/cancel.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 30px 30px;
+}
+
+html:has(.contact-model[data-visible="true"], .main-nav[data-visible="true"]) {
+    overflow-y: hidden;
+}
+.intro{
+    min-height: 100vh;
+    /* background-color: chartreuse; */
+}
+  
+@media (max-width: 35em) {
+    nav {
+        top: 8vw;
+        bottom: 8vw;
+        left: 8vw;
+        right: 8vw;
+    }
+
+    .main-nav {
+        --gap: 2em;
+        position: fixed;
+        inset: 0 0 0 0%;
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2em;
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(1rem);
+        z-index: 1000;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .main-nav[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        background-image: url(../../assets/img/hamburger.png);
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 30px 30px;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 1.2rem;
+        right: 2rem;
+        border: 0;
+        z-index: 9999;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(../../assets/img/cancel.png);
+    }
+
+    .contact-nav {
+        position: absolute;
+        right: 10vw;
+    }
+
+}
+
+/* header{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  } */
+
+.masterhead{
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+    z-index: 1;
+    transition: .5s;
+  }
+  
+  .masterhead_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+  
+  canvas{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    height: 110vh;
+    z-index: 1;
+    filter: url(#fancy-goo);
+  }
+
+  .svg{
+    display: none;
+  }

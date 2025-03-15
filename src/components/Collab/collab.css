@@ -1,0 +1,61 @@
+@import url('../../assets/css/main.css');
+
+#collab{
+    position: relative;
+    color: white;
+  }
+  #collab .section_content{
+    display: grid;
+    place-items: center;
+  }
+
+  .feel_free{
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem 1rem;
+    margin: 6rem 4rem;
+  }
+  .feel_free h4{
+    font-family: var(--text-primary);
+    font-size: 4vw;
+    text-align-last: left;
+    color: var(--color-black-secondary);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+  .feel_free h4 span{
+    color: var(--color-accent);
+    font-size: 53px;
+  }
+  .more{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 67%;
+    height: 20%;
+    padding: 1rem 1rem;
+    border: 1px solid var(--color-black-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .more h5{
+    color: var(--color-black-secondary);
+    font-size: var(--text-paragraph);
+    text-transform: uppercase;
+  }
+  
+  #section3 .cont_instruction h3 {
+    font-size: var(--text-medium-huge);
+    font-weight: 900;
+    color: var(--color-black-secondary);
+    cursor: none;
+    transition: 1.5s;
+  }
+  
+  #section3 .open_contact:hover h3 {
+      font-size: var(--text-huge);
+      color: var(--color-accent);
+  }
+  

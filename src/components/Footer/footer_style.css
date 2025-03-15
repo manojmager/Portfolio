@@ -1,0 +1,43 @@
+footer{
+    /* position: absolute; */
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+  }
+  .footer-content{
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: capitalize; 
+    font-family: var(--text-primary);
+    color: var(--color-black-secondary);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.04em;
+  }
+  .footer-profession{
+    position: absolute;
+    left: 3.3vw;
+    text-align: left;
+  }
+  .loc-social-links{
+    position: absolute;
+    right: 3.3vw;
+    text-align: right;
+  }
+  .social-links ul{
+    display: flex;
+  }
+  
+  .social-links ul li{
+    margin-left: 25px;
+    font-family: var(--text-primary);
+    font-size: var(--text-medium);
+    cursor: pointer;
+  }

@@ -1,0 +1,41 @@
+  /*===================================<SECTION-1>=======================================*/
+  #about .section_content{
+    position: relative;
+    padding: 3.3vw;
+    flex-direction: row;
+    /* align-items: center; */
+  }
+  .paragraph{
+    padding-left: 3rem;
+  }
+  .paragraph p{
+    font-family: var(--text-primary);
+    font-size: var(--text-medium-medium);
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .about_me{
+    max-width: 450px;
+    min-width: 100px;
+  }
+  .about_me p{
+    font-size: var(--text-medium);
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .about_me a{
+    text-decoration: underline;
+  }
+
+
+@media (max-width: 65em) {
+  #about .section_content{
+    flex-direction: column;
+  }
+}
