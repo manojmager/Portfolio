@@ -1,5 +1,5 @@
 import React from 'react'
-import workon_styles from './workon-style.css';
+import './workon-style.css';
 import tog_img from '../../assets/img/tog-img.png'
 
 export default function WorkOn() {

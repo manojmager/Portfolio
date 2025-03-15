@@ -1,5 +1,5 @@
 import React from 'react'
-import about_styles from './about-style.css';
+import './about-style.css';
 import profileImage from '../../assets/img/profile1.jpg';
 
 export default function About() {

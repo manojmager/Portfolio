@@ -1,6 +1,6 @@
 import React from 'react'
-import works_styles from './works-style.css';
-import phone_styles from './phone-style.css'
+import './works-style.css';
+import './phone-style.css'
 
 export default function Works() {
     const spanStyles = [

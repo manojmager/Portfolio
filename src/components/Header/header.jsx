@@ -9,7 +9,7 @@ export default function Header() {
         // const font = new FontFace('Orbitron', 'url(https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
         initializeHeader();
         const canvas = canvasRef.current;
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 

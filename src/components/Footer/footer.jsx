@@ -1,5 +1,5 @@
 import React from 'react'
-import footer_style from './footer_style.css'
+import './footer_style.css'
 export default function Footer() {
     return (
         <footer>
@@ -15,9 +15,9 @@ export default function Footer() {
                     <p>London, Canada</p>
                     <div className="social-links">
                         <ul>
-                            <li><a href="">instagram</a></li>
-                            <li><a href="">email</a></li>
-                            <li><a href="">upwork</a></li>
+                            <li><a href="https://www.instagram.com/kamadeva____/">instagram</a></li>
+                            <li><a href="https://mail.google.com/mail/">email</a></li>
+                            <li><a href="https://mail.google.com/mail/">upwork</a></li>
                         </ul>
                     </div>
                 </div>
